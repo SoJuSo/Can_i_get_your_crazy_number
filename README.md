@@ -13,6 +13,7 @@ The purpose of this project is to make entering a phone number as difficult as p
   - [ ] Challenge: Customizing the calculator
 - [ ] This phone number changes randomly!!!
   - [ ] Challenge: Adjusting the difficulty of random change intervals
+- [ ] theme mode(dark/light)
 
 ### Codes
 
