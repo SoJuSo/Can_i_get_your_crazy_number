@@ -6,6 +6,7 @@ const ScrollPhoneNumberPage = () => {
     <>
       <div>ScrollPhoneNumberPage</div>
       <input
+        tabIndex={-1}
         style={{ width: "200px" }}
         type="range"
         min={0}
@@ -19,16 +20,16 @@ const ScrollPhoneNumberPage = () => {
           if (e.deltaY < 0) {
             setPhoneNumber(phoneNumber + 1);
           } else {
-            setPhoneNumber(phoneNumber - 1);
+            if (phoneNumber > 0) {
+              setPhoneNumber(phoneNumber - 1);
+            }
           }
         }}
       />
-      <div>
-        {`010 ` +
-          String(phoneNumber).slice(4, 8).padStart(4, "0") +
-          " " +
-          String(phoneNumber).slice(0, 4).padStart(4, "0")}
-      </div>
+      <p>1</p>
+      <div style={{ display: "inline" }}>010 </div>
+      <div style={{ display: "inline" }}>{String(phoneNumber).slice(4, 8).padStart(4, "0")} </div>
+      <div>{String(phoneNumber).slice(0, 4).padStart(4, "0")}</div>
     </>
   );
 };
