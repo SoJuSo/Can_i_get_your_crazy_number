@@ -3,4 +3,5 @@ export const routeList = {
   ScrollPhoneNumber: "/ScrollPhoneNumber",
   GivenNumberCalculator: "/GivenNumberCalculator",
   RandomNumberCalculator: "/RandomNumberCalculator",
+  NotFound: "/*",
 };
