@@ -6,12 +6,15 @@ The purpose of this project is to make entering a phone number as difficult as p
 
 ### Functions
 
-- [ ] Dev environment Setting
-- [ ] Phone number that moves with a scrollbar
-  - [ ] Challenge: Easy, Medium, Hard levels
-- [ ] Phone number calculated using a given calculator
+- [x] Dev environment Setting
+- [x] Phone number that moves with a scrollbar
+  - [ ] design
+  - [x] Challenge: Easy, Medium, Hard levels
+- [x] Phone number calculated using a given calculator
+  - [ ] design
   - [ ] Challenge: Customizing the calculator
 - [ ] This phone number changes randomly!!!
+  - [ ] design
   - [ ] Challenge: Adjusting the difficulty of random change intervals
 - [ ] theme mode(dark/light)
 
