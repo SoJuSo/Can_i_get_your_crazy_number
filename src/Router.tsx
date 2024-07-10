@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { routeList } from "./constants/route";
 import { Link, Route, Routes } from "react-router-dom";
+import AnimatedBackground from "./styles/AnimationBackground";
 
 const ScrollPhoneNumberPage = lazy(() => import("./pages/ScrollPhoneNumberPage"));
 const GivenNumberCalculatorPage = lazy(() => import("./pages/GivenNumberCalculatorPage"));
@@ -13,7 +14,8 @@ const Router = () => {
 
   return (
     <>
-      <div style={{ display: "flex", gap: "1rem" }}>
+      <AnimatedBackground />
+      <div style={{ display: "flex", gap: "1rem", zIndex: "2" }}>
         <Link to={routeList.HOME}>to Home</Link>
         <Link to={routeList.ScrollPhoneNumber}>ScrollPhoneNumber</Link>
         <Link to={routeList.GivenNumberCalculator}>GivenNumberCalculator</Link>

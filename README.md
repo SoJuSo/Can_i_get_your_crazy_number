@@ -16,6 +16,7 @@ The purpose of this project is to make entering a phone number as difficult as p
 - [ ] This phone number changes randomly!!!
   - [ ] design
   - [ ] Challenge: Adjusting the difficulty of random change intervals
+- [ ] storybook
 - [ ] theme mode(dark/light)
 
 ### Codes
@@ -28,4 +29,4 @@ The purpose of this project is to make entering a phone number as difficult as p
 
 ## Stack
 
-React, TypeScript, Vite, i8n(for globalization), styled-components, zustand(TBD), Vercel
+React, TypeScript, Vite, i8n(for globalization), styled-components, zustand(TBD), Vercel, StoryBook
