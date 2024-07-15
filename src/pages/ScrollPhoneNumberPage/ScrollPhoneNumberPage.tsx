@@ -24,10 +24,10 @@ const ScrollPhoneNumberPage = () => {
             level === "easy"
               ? "300px"
               : level === "korean"
-              ? "50px"
-              : level === "hard"
-              ? "100px"
-              : "200px",
+                ? "50px"
+                : level === "hard"
+                  ? "100px"
+                  : "200px",
         }}
         type="range"
         min={0}
@@ -73,11 +73,12 @@ const ScrollPhoneNumberPage = () => {
         <button onClick={setHard}>어려움</button>
         <button onClick={setKorean}>한국인</button>
       </div>
-      <div>{phoneNumber.toString().padStart(8, "0")}</div>
+      {/* <div>{phoneNumber.toString().padStart(8, "0")}</div> */}
       <p></p>
-      <div>010 </div>
-      <div>{String(phoneNumber).slice(4, 8).padStart(4, "0")} </div>
-      <div>{String(phoneNumber).slice(0, 4).padStart(4, "0")}</div>
+      <div>
+        010 {String(phoneNumber).slice(0, 4).padStart(4, "0")}{" "}
+        {String(phoneNumber).slice(4, 8).padStart(4, "0")}
+      </div>
     </>
   );
 };

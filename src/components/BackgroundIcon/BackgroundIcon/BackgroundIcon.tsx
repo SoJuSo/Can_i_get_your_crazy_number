@@ -1,4 +1,3 @@
-// components/BackgroundIcon.tsx
 import { GiRotaryPhone } from "react-icons/gi";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { TiPhone } from "react-icons/ti";
@@ -14,7 +13,6 @@ interface BackgroundIconProps {
 
 const BackgroundIcon = ({ random = 1, size = 70 }: BackgroundIconProps): JSX.Element => {
   const [startColor, endColor] = selectRandomColors();
-  console.log(startColor, endColor);
 
   const Icon =
     random === 1

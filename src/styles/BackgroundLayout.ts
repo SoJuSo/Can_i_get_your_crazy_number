@@ -1,16 +1,40 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
-const animate = keyframes`
+const animateLeft = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateY(10px) rotate(0deg);
+    transform: translate(-50%, -50%) translateY(100px) rotate(5deg);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(-50%, -50%) translateY(50px) rotate(0deg);
     opacity: 0.3;
     border-radius: 0;
   }
-  50%{
+  60%{
     opacity: 0.2;
   }
   100% {
-    transform: translate(-50%, -50%) translateY(-1000px) rotate(360deg);
+    transform: translate(-50%, -50%) translateY(-1000px) rotate(-350deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+`;
+
+const animateRight = keyframes`
+  0% {
+    transform: translate(-50%, -50%) translateY(100px) rotate(-5deg);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(-50%, -50%) translateY(50px) rotate(0deg);
+    opacity: 0.3;
+    border-radius: 0;
+  }
+  60%{
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-1000px) rotate(350deg);
     opacity: 0;
     border-radius: 50%;
   }
@@ -40,9 +64,16 @@ export const Circles = styled.ul`
     position: absolute;
     display: block;
     list-style: none;
-    /* background: rgba(255, 255, 255, 0.2); */
-    animation: ${animate} 25s linear infinite;
     bottom: -150px;
+
+    ${() => css`
+      &:nth-child(odd) {
+        animation: ${animateRight} 30s linear infinite;
+      }
+      &:nth-child(even) {
+        animation: ${animateLeft} 30s linear infinite;
+      }
+    `}
 
     &:nth-child(1) {
       left: 25%;

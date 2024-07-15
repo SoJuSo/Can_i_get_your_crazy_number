@@ -38,7 +38,7 @@ const GivenNumberCalculatorPage = () => {
         <button onClick={floor}>내림</button>
         <button onClick={ceil}>올림</button>
       </div>
-      <p>{insertSpacesEveryFourChars(phoneNumber.toString())}</p>
+      <p>010 {"[ " + insertSpacesEveryFourChars(phoneNumber.toString()) + " ]"}</p>
     </>
   );
 };
