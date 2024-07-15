@@ -44,7 +44,9 @@ const RandomNumberCalculatorPage: React.FC = () => {
   return (
     <div>
       <h1>Random Number Display</h1>
-      <h2>{randomNumber}</h2>
+      <h2>
+        010 {randomNumber.slice(0, 4)} {randomNumber.slice(4, 8)}
+      </h2>
       <button onClick={startRandomizing} disabled={isRunning}>
         Start
       </button>
