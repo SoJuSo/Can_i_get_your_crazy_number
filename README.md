@@ -29,4 +29,4 @@ The purpose of this project is to make entering a phone number as difficult as p
 
 ## Stack
 
-React, TypeScript, Vite, i8n(for globalization), styled-components, zustand(TBD), Vercel, StoryBook
+React, TypeScript, Vite, i18n(for globalization), styled-components, zustand(TBD), Vercel, StoryBook
