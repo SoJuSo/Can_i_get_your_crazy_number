@@ -15,13 +15,9 @@ const Router = () => {
   return (
     <>
       <Layout />
-      <nav style={{ display: "flex", gap: "1rem", zIndex: "2" }}>
-        <Link to={routeList.HOME}>to Home</Link>
-        <Link to={routeList.ScrollPhoneNumber}>ScrollPhoneNumber</Link>
-        <Link to={routeList.GivenNumberCalculator}>GivenNumberCalculator</Link>
-        <Link to={routeList.RandomNumberCalculator}>RandomNumberCalculator</Link>
-      </nav>
-
+      <ContentLayout>
+        <GlobalNavigationBar />
+        <Content>
       <Suspense fallback={<div>Loading...</div>}>
         {/* GNB */}
         <Routes>
