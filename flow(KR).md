@@ -270,3 +270,9 @@ body.dark-mode .highlight {
 <br />
 
 현재 css로 nthchild로 처리된 부분 추후에 개별 컴포넌트화하고 랜덤 요소까지 부여하기
+
+---
+
+24.07.15<br >
+기능을 2개 정도 추가해보자..
+슬롯머신777 느낌이랑 input, select를 써서
