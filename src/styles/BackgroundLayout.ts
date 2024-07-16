@@ -1,32 +1,35 @@
 import styled, { css, keyframes } from "styled-components";
 
-// 애니메이션을 단순화하고, 불필요한 속성 제거
 const animateLeft = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateY(100px) rotate(5deg);
-    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10vh) rotate(5deg);
   }
   5% {
-    transform: translate(-50%, -50%) translateY(50px) rotate(0deg);
+    transform: translate(-50%, -50%) translateY(5vh) rotate(0deg);
     opacity: 0.3;
   }
+  80% {
+    opacity: 0.2;
+  }
   100% {
-    transform: translate(-50%, -50%) translateY(-1000px) rotate(-350deg);
+    transform: translate(-50%, -50%) translateY(-95vh) rotate(-350deg);
     opacity: 0;
   }
 `;
 
 const animateRight = keyframes`
   0% {
-    transform: translate(-50%, -50%) translateY(100px) rotate(-5deg);
-    opacity: 0;
+    transform: translate(-50%, -50%) translateY(10vh) rotate(-5deg);
   }
   5% {
-    transform: translate(-50%, -50%) translateY(50px) rotate(0deg);
+    transform: translate(-50%, -50%) translateY(5vh) rotate(0deg);
     opacity: 0.3;
   }
+  80% {
+    opacity: 0.2;
+  }
   100% {
-    transform: translate(-50%, -50%) translateY(-1000px) rotate(350deg);
+    transform: translate(-50%, -50%) translateY(-95vh) rotate(350deg);
     opacity: 0;
   }
 `;
@@ -55,7 +58,8 @@ export const Circles = styled.ul`
     position: absolute;
     display: block;
     list-style: none;
-    bottom: -150px;
+    bottom: -15vh;
+    opacity: 0.3;
 
     ${() => css`
       &:nth-child(4n + 1) {
