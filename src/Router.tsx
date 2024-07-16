@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { routeList } from "./constants/route";
 import { Route, Routes } from "react-router-dom";
-import Layout from "./Layout";
+import Background from "./Background";
 import GlobalNavigationBar from "./components/GlobalNavigationBar";
 import { Content, ContentLayout } from "./styles/ContentLayout";
 
@@ -14,7 +14,7 @@ const HomePage = lazy(() => import("./pages/HomePage"));
 const Router = () => {
   return (
     <>
-      <Layout />
+      <Background />
       <ContentLayout>
         <GlobalNavigationBar />
         <Content>
