@@ -11,7 +11,7 @@ i18n
       ko: ko,
     },
     lng: "en", // if you're using a language detector, do not define the lng option
-    fallbackLng: "en",
+    fallbackLng: "ko",
     ns: ["page"],
     interpolation: {
       escapeValue: false,
