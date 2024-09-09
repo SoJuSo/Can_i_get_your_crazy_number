@@ -7,11 +7,19 @@ interface LevelButtonProps {
 
 const LevelButton: React.FC<LevelButtonProps> = ({ setLevel }) => {
   return (
-    <div>
-      <CustomButton onClick={() => setLevel("easy")}>쉬움</CustomButton>
-      <CustomButton onClick={() => setLevel("normal")}>중간</CustomButton>
-      <CustomButton onClick={() => setLevel("hard")}>어려움</CustomButton>
-      <CustomButton onClick={() => setLevel("korean")}>한국인</CustomButton>
+    <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
+      <CustomButton variant="green" onClick={() => setLevel("easy")}>
+        쉬움
+      </CustomButton>
+      <CustomButton variant="orange" onClick={() => setLevel("normal")}>
+        중간
+      </CustomButton>
+      <CustomButton variant="red" onClick={() => setLevel("hard")}>
+        어려움
+      </CustomButton>
+      <CustomButton variant="blue" onClick={() => setLevel("korean")}>
+        한국인
+      </CustomButton>
     </div>
   );
 };
