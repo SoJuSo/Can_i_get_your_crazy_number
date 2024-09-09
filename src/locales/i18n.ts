@@ -10,7 +10,7 @@ i18n
       en: en,
       ko: ko,
     },
-    lng: "en", // if you're using a language detector, do not define the lng option
+    lng: "ko", // if you're using a language detector, do not define the lng option
     fallbackLng: "ko",
     ns: ["page"],
     interpolation: {

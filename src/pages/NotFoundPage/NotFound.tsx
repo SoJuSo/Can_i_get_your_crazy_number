@@ -1,4 +1,7 @@
+import { useLocalizer } from "../../hooks/useLocalizer";
+
 const NotFound = () => {
+  const t = useLocalizer();
   return (
     <>
       <div
@@ -10,7 +13,7 @@ const NotFound = () => {
           justifyContent: "center",
         }}
       >
-        <span style={{ fontSize: "2rem", fontWeight: "bold" }}>페이지가 존재하지 않습니다. 😵</span>
+        <span style={{ fontSize: "2rem", fontWeight: "bold" }}>{t(`404Page.text`)}</span>
       </div>
     </>
   );
