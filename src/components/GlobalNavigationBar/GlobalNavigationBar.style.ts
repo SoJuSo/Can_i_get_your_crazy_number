@@ -7,28 +7,42 @@ export interface StyledLinkProps {
 
 export const Navigate = styled.nav`
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
   z-index: 2;
+  font-weight: bold;
+  font-size: 1.1rem;
+`;
+
+export const HomeLinkContainer = styled.div`
+  display: flex;
+  margin: 1rem 0;
+`;
+
+export const CalculatorLinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 `;
 
 export const StyledLink = styled(Link)<StyledLinkProps>`
-  border: 1px solid;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
   color: black;
   text-decoration: none;
+  background-color: #ffcc80;
   ${({ $active }) => {
     if ($active) {
       return css`
         cursor: pointer;
         &:hover {
-          color: red;
+          color: #ff9800;
         }
       `;
     } else {
       return css`
-        color: gray;
+        color: #c69c8f;
         cursor: not-allowed;
         pointer-events: none;
       `;
