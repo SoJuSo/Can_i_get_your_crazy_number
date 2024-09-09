@@ -10,7 +10,16 @@ const ScrollPhoneNumberPage = () => {
   const [level, setLevel] = useState<"easy" | "normal" | "hard" | "korean">("easy");
 
   return (
-    <>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <LevelButton setLevel={setLevel} />
       <PhoneNumberInput
         phoneNumber={phoneNumber}
@@ -22,7 +31,7 @@ const ScrollPhoneNumberPage = () => {
         level={level}
       />
       <PhoneNumberView phoneNumber={phoneNumber} />
-    </>
+    </div>
   );
 };
 
