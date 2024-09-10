@@ -1,6 +1,4 @@
 import React from "react";
-import WheelCheckbox from "../WheelCheckbox";
-import KeyboardCheckbox from "../KeyboardCheckbox";
 interface PhoneNumberInputProps {
   phoneNumber: number;
   setPhoneNumber: (value: number) => void;
@@ -15,9 +13,7 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
   phoneNumber,
   setPhoneNumber,
   activeWheel,
-  setActiveWheel,
   activeKeyBoard,
-  setActiveKeyBoard,
   level,
 }) => {
   return (
@@ -56,8 +52,6 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
           }
         }}
       />
-      <WheelCheckbox activeWheel={activeWheel} setActiveWheel={setActiveWheel} />
-      <KeyboardCheckbox activeKeyBoard={activeKeyBoard} setActiveKeyBoard={setActiveKeyBoard} />
     </>
   );
 };

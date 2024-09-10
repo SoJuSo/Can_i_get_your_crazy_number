@@ -2,6 +2,8 @@ import { useState } from "react";
 import PhoneNumberInput from "../../components/ScrollPhoneNumber/PhoneNumberInput";
 import LevelButton from "../../components/ScrollPhoneNumber/LevelButton";
 import PhoneNumberView from "../../components/ScrollPhoneNumber/PhoneNumberView";
+import WheelCheckbox from "../../components/ScrollPhoneNumber/WheelCheckbox";
+import KeyboardCheckbox from "../../components/ScrollPhoneNumber/KeyboardCheckbox";
 
 const ScrollPhoneNumberPage = () => {
   const [phoneNumber, setPhoneNumber] = useState(0);
@@ -30,6 +32,8 @@ const ScrollPhoneNumberPage = () => {
         setActiveKeyBoard={setActiveKeyBoard}
         level={level}
       />
+      <WheelCheckbox activeWheel={activeWheel} setActiveWheel={setActiveWheel} />
+      <KeyboardCheckbox activeKeyBoard={activeKeyBoard} setActiveKeyBoard={setActiveKeyBoard} />
       <PhoneNumberView phoneNumber={phoneNumber} />
     </div>
   );
