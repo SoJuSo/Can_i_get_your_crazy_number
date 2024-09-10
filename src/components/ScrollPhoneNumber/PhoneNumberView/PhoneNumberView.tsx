@@ -5,10 +5,10 @@ interface PhoneNumberViewProps {
 }
 
 const PhoneNumberDisplay: React.FC<PhoneNumberViewProps> = ({ phoneNumber }) => {
+  const parsedNumber = String(phoneNumber).padStart(8, "0");
   return (
     <div>
-      010 {String(phoneNumber).slice(0, 4).padStart(4, "0")}{" "}
-      {String(phoneNumber).slice(4, 8).padStart(4, "0")}
+      010 {parsedNumber.slice(0, 4)} {parsedNumber.slice(4, 8)}
     </div>
   );
 };
