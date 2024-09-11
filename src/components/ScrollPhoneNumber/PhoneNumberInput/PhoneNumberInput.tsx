@@ -25,20 +25,14 @@ const PhoneNumberInput: React.FC<PhoneNumberInputProps> = ({
           }
         }}
         style={{
-          width:
-            level === "easy"
-              ? "300px"
-              : level === "korean"
-                ? "50px"
-                : level === "hard"
-                  ? "100px"
-                  : "200px",
+          width: level === "easy" ? "300px" : level === "korean" ? "50px" : level === "hard" ? "100px" : "200px",
         }}
         type="range"
         min={0}
         max={99999999}
         step={1}
         value={phoneNumber}
+        tabIndex={0}
         onChange={(e) => {
           setPhoneNumber(e.target.valueAsNumber);
         }}
