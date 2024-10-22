@@ -12,6 +12,13 @@ const NotFound = lazy(() => import("./pages/NotFoundPage"));
 const HomePage = lazy(() => import("./pages/HomePage"));
 
 const App = () => {
+  const routeComponents = {
+    [routeList.HOME]: <HomePage />,
+    [routeList.ScrollPhoneNumber]: <ScrollPhoneNumberPage />,
+    [routeList.GivenNumberCalculator]: <GivenNumberCalculatorPage />,
+    [routeList.RandomNumberCalculator]: <RandomNumberCalculatorPage />,
+    [routeList.NotFound]: <NotFound />,
+  };
   return (
     <>
       <Background />
@@ -20,26 +27,9 @@ const App = () => {
         <Content>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route
-                path={routeList.HOME} // 메인페이지
-                element={<HomePage />}
-              />
-              <Route
-                path={routeList.ScrollPhoneNumber} // 스크롤 입력기 페이지
-                element={<ScrollPhoneNumberPage />}
-              />
-              <Route
-                path={routeList.GivenNumberCalculator} // 계산기 입력기 페이지
-                element={<GivenNumberCalculatorPage />}
-              />
-              <Route
-                path={routeList.RandomNumberCalculator} // 랜덤 입력기 페이지
-                element={<RandomNumberCalculatorPage />}
-              />
-              <Route
-                path={routeList.NotFound} // 404 페이지
-                element={<NotFound />}
-              />
+              {Object.entries(routeComponents).map(([path, element]) => (
+                <Route key={path} path={path} element={element} />
+              ))}
             </Routes>
           </Suspense>
         </Content>
