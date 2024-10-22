@@ -1,10 +1,8 @@
-import React from "react";
-
 interface PhoneNumberViewProps {
   phoneNumber: number;
 }
 
-const PhoneNumberDisplay: React.FC<PhoneNumberViewProps> = ({ phoneNumber }) => {
+const PhoneNumberDisplay = ({ phoneNumber }: PhoneNumberViewProps) => {
   const parsedNumber = String(phoneNumber).padStart(8, "0");
   return (
     <div>

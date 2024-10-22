@@ -1,14 +1,9 @@
-import React from "react";
-
 interface KeyboardCheckboxProps {
   activeKeyBoard: boolean;
   setActiveKeyBoard: (value: boolean) => void;
 }
 
-const KeyboardCheckbox: React.FC<KeyboardCheckboxProps> = ({
-  activeKeyBoard,
-  setActiveKeyBoard,
-}) => {
+const KeyboardCheckbox = ({ activeKeyBoard, setActiveKeyBoard }: KeyboardCheckboxProps) => {
   return (
     <p>
       <span>keyBoard {String(activeKeyBoard)} </span>

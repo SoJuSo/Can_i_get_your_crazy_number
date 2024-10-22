@@ -1,11 +1,9 @@
-import React from "react";
-
 interface WheelCheckboxProps {
   activeWheel: boolean;
   setActiveWheel: (value: boolean) => void;
 }
 
-const WheelCheckbox: React.FC<WheelCheckboxProps> = ({ activeWheel, setActiveWheel }) => {
+const WheelCheckbox = ({ activeWheel, setActiveWheel }: WheelCheckboxProps) => {
   return (
     <p>
       <span>wheel {String(activeWheel)} </span>

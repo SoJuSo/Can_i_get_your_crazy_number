@@ -5,7 +5,7 @@ import PhoneNumberView from "../../components/ScrollPhoneNumber/PhoneNumberView"
 import WheelCheckbox from "../../components/ScrollPhoneNumber/WheelCheckbox";
 import KeyboardCheckbox from "../../components/ScrollPhoneNumber/KeyboardCheckbox";
 
-const ScrollPhoneNumberPage: React.FC = () => {
+const ScrollPhoneNumberPage = () => {
   const [phoneNumber, setPhoneNumber] = useState<number>(0);
   const [activeWheel, setActiveWheel] = useState<boolean>(false);
   const [activeKeyBoard, setActiveKeyBoard] = useState<boolean>(false);
