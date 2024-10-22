@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { styled } from "styled-components";
 
 interface PhoneNumberInputProps {
@@ -28,15 +29,25 @@ const PhoneNumberInput = ({
   activeKeyBoard,
   level,
 }: PhoneNumberInputProps) => {
-  const handleWheel = (e: React.WheelEvent<HTMLInputElement>) => {
-    if (activeWheel) {
-      if (e.deltaY < 0 && phoneNumber < 99999999) {
-        setPhoneNumber(phoneNumber + 1);
-      } else if (e.deltaY > 0 && phoneNumber > 0) {
-        setPhoneNumber(phoneNumber - 1);
+  const handleWheel = useCallback(
+    (e: React.WheelEvent<HTMLInputElement>) => {
+      if (activeWheel) {
+        if (e.deltaY < 0 && phoneNumber < 99999999) {
+          setPhoneNumber(phoneNumber + 1);
+        } else if (e.deltaY > 0 && phoneNumber > 0) {
+          setPhoneNumber(phoneNumber - 1);
+        }
       }
-    }
-  };
+    },
+    [activeWheel, phoneNumber, setPhoneNumber]
+  );
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPhoneNumber(e.target.valueAsNumber);
+    },
+    [setPhoneNumber]
+  );
 
   return (
     <StyledInput
@@ -45,25 +56,13 @@ const PhoneNumberInput = ({
           e.preventDefault();
         }
       }}
-      style={{
-        width:
-          level === "easy"
-            ? "300px"
-            : level === "korean"
-              ? "50px"
-              : level === "hard"
-                ? "100px"
-                : "200px",
-      }}
       type="range"
       min={0}
       max={99999999}
       step={1}
       value={phoneNumber}
       tabIndex={0}
-      onChange={(e) => {
-        setPhoneNumber(e.target.valueAsNumber);
-      }}
+      onChange={handleChange}
       onWheel={handleWheel}
       level={level}
     />
