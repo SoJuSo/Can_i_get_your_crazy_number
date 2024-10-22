@@ -5,6 +5,7 @@ import { GlobalStyle } from "./styles/globalStyles.ts";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme.ts";
 import { BrowserRouter } from "react-router-dom";
+import "../src/locales/i18n.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const RandomNumberCalculatorPage: React.FC = () => {
+const RandomNumberCalculatorPage = () => {
   const [randomNumber, setRandomNumber] = useState<string>("00000000");
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const intervalRef = React.useRef<number>();

@@ -1,4 +1,4 @@
-import page from "./page.json";
+import page from "./en-page.json";
 
 export default {
   page,

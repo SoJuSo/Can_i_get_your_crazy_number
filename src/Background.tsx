@@ -2,7 +2,7 @@ import BackgroundPhone from "./components/BackgroundIcon/BackgroundPhone";
 import useDebounceWidth from "./hooks/useDebounceWidth";
 import { Area, Circles } from "./styles/BackgroundLayout";
 
-const Layout = () => {
+const Background = () => {
   const windowWidth = Math.max(Math.trunc(useDebounceWidth() / 100), 7);
   const currentWidth = windowWidth < 20 ? windowWidth : 19;
   return (
@@ -16,4 +16,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default Background;
