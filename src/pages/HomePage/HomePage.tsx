@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 const animate = keyframes`
   0% { transform: rotate(0deg); }
   5% { transform: rotate(.5deg); }
-  10% { transform: rotate(0eg); }
+  10% { transform: rotate(0deg); }
   15% { transform: rotate(-0.5deg); }
   20% { transform: rotate(0deg); }
   25% { transform: rotate(0.5deg); }
-  30% { transform: rotate(0eg); }
+  30% { transform: rotate(0deg); }
   35% { transform: rotate(-0.5deg); }
   40% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
