@@ -3,8 +3,8 @@ import { useState } from "react";
 const GivenNumberCalculatorPage = () => {
   const [phoneNumber, setPhoneNumber] = useState(0);
 
-  const MIN_VALUE = -(10 ** 15);
-  const MAX_VALUE = 10 ** 15;
+  const MIN_VALUE = 0;
+  const MAX_VALUE = 99999999;
 
   const updatePhoneNumber = (value: number) => {
     if (value < MIN_VALUE) {
@@ -16,9 +16,9 @@ const GivenNumberCalculatorPage = () => {
     }
   };
 
-  function insertSpacesEveryFourChars(str: string) {
+  const insertSpacesEveryFourChars = (str: string) => {
     return str.replace(/(.{4})/g, "$1 ").trim();
-  }
+  };
 
   const multiple3 = () => updatePhoneNumber(phoneNumber * 3);
   const plus7 = () => updatePhoneNumber(phoneNumber + 7);
@@ -38,7 +38,7 @@ const GivenNumberCalculatorPage = () => {
         <button onClick={floor}>내림</button>
         <button onClick={ceil}>올림</button>
       </div>
-      <p>010 {"[ " + insertSpacesEveryFourChars(phoneNumber.toString()) + " ]"}</p>
+      <p>020 {"[ " + insertSpacesEveryFourChars(phoneNumber.toString()) + " ]"}</p>
     </>
   );
 };

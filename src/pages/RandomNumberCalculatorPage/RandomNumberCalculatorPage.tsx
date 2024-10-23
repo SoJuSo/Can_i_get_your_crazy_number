@@ -45,7 +45,7 @@ const RandomNumberCalculatorPage = () => {
     <div>
       <h1>Random Number Display</h1>
       <h2>
-        010 {randomNumber.slice(0, 4)} {randomNumber.slice(4, 8)}
+        020 {randomNumber.slice(0, 4)} {randomNumber.slice(4, 8)}
       </h2>
       <button onClick={startRandomizing} disabled={isRunning}>
         Start
