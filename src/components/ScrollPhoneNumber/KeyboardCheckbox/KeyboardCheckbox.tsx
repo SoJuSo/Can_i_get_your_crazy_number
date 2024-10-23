@@ -9,7 +9,7 @@ const KeyboardCheckbox = ({ activeKeyBoard, setActiveKeyBoard }: KeyboardCheckbo
   return (
     <Checkbox
       id="keyBoard"
-      label="keyBoard"
+      label="키보드"
       isActive={activeKeyBoard}
       setIsActive={setActiveKeyBoard}
     />

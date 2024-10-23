@@ -42,7 +42,7 @@ interface CheckboxProps {
 const Checkbox = ({ id, label, isActive, setIsActive }: CheckboxProps) => {
   return (
     <CheckboxContainer>
-      <span>
+      <span style={{ fontSize: "1.1rem", fontWeight: "600" }}>
         {label} {isActive ? "동작!" : "안됌!"}
       </span>
       <HiddenCheckbox id={id} checked={isActive} onChange={() => setIsActive(!isActive)} />

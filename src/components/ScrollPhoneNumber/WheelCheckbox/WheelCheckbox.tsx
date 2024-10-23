@@ -6,7 +6,9 @@ interface WheelCheckboxProps {
 }
 
 const WheelCheckbox = ({ activeWheel, setActiveWheel }: WheelCheckboxProps) => {
-  return <Checkbox id="wheel" label="wheel" isActive={activeWheel} setIsActive={setActiveWheel} />;
+  return (
+    <Checkbox id="wheel" label="마우스 휠" isActive={activeWheel} setIsActive={setActiveWheel} />
+  );
 };
 
 export default WheelCheckbox;
