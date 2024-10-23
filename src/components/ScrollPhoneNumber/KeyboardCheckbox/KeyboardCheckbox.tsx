@@ -1,3 +1,5 @@
+import Checkbox from "../../common/CheckBox";
+
 interface KeyboardCheckboxProps {
   activeKeyBoard: boolean;
   setActiveKeyBoard: (value: boolean) => void;
@@ -5,14 +7,12 @@ interface KeyboardCheckboxProps {
 
 const KeyboardCheckbox = ({ activeKeyBoard, setActiveKeyBoard }: KeyboardCheckboxProps) => {
   return (
-    <p>
-      <span>keyBoard {String(activeKeyBoard)} </span>
-      <input
-        type="checkbox"
-        checked={activeKeyBoard}
-        onChange={() => setActiveKeyBoard(!activeKeyBoard)}
-      />
-    </p>
+    <Checkbox
+      id="keyBoard"
+      label="keyBoard"
+      isActive={activeKeyBoard}
+      setIsActive={setActiveKeyBoard}
+    />
   );
 };
 
