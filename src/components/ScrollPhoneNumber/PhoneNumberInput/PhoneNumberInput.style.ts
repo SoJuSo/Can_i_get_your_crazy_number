@@ -21,7 +21,7 @@ export const SliderInput = styled.input<{ $level: string }>`
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    background: skyblue;
+    background: teal;
     border: 1px solid white;
     cursor: pointer;
     margin-top: -0.2875rem;
@@ -43,7 +43,7 @@ export const SliderInput = styled.input<{ $level: string }>`
     width: 1.2rem;
     height: 1.2rem;
     border-radius: 50%;
-    background: skyblue;
+    background: teal;
     border: 1px solid white;
     cursor: pointer;
     margin-top: -0.2875rem;
