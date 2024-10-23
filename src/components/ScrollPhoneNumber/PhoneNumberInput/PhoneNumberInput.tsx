@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { styled } from "styled-components";
+import { SliderInput } from "./PhoneNumberInput.style";
 
 interface PhoneNumberInputProps {
   phoneNumber: number;
@@ -10,17 +10,6 @@ interface PhoneNumberInputProps {
   setActiveKeyBoard: (value: boolean) => void;
   level: "easy" | "normal" | "hard" | "korean";
 }
-
-const StyledInput = styled.input<{ level: string }>`
-  width: ${({ level }) =>
-    level === "easy"
-      ? "300px"
-      : level === "korean"
-        ? "50px"
-        : level === "hard"
-          ? "100px"
-          : "200px"};
-`;
 
 const PhoneNumberInput = ({
   phoneNumber,
@@ -50,7 +39,7 @@ const PhoneNumberInput = ({
   );
 
   return (
-    <StyledInput
+    <SliderInput
       onKeyDown={(e) => {
         if (!activeKeyBoard) {
           e.preventDefault();
@@ -64,7 +53,7 @@ const PhoneNumberInput = ({
       tabIndex={0}
       onChange={handleChange}
       onWheel={handleWheel}
-      level={level}
+      $level={level}
     />
   );
 };
